@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  sam. 12 mai 2018 à 08:34
+-- Généré le :  sam. 12 mai 2018 à 19:59
 -- Version du serveur :  5.6.39-cll-lve
 -- Version de PHP :  5.6.30
 
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `mathieu1_gif`
 --
-CREATE DATABASE IF NOT EXISTS `mathieu1_gif` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `mathieu1_gif`;
 
 -- --------------------------------------------------------
 
@@ -41,9 +39,9 @@ CREATE TABLE `gif` (
 --
 
 INSERT INTO `gif` (`id`, `categorie`, `urlGif`) VALUES
-(1, 1, 'https://giphy.com/gifs/4QFqGyaGwCSitBzwbj/html5'),
-(3, 0, 'https://giphy.com/gifs/xUOxfgmXP3EUTK4EPC/html5'),
-(4, 2, 'https://giphy.com/gifs/3o7aCXPFJevWPrWSru/html5');
+(1, 1, 'https://media.giphy.com/media/9xijGdDIMovchalhxN/source.gif'),
+(3, 0, 'https://media.giphy.com/media/aYAlzeNnDDn4k/source.mp4'),
+(4, 2, 'https://media.giphy.com/media/5xtDarlGFcf42cURiRa/giphy.gif');
 
 --
 -- Index pour les tables déchargées
