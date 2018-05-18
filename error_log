@@ -1,0 +1,49 @@
+[12-May-2018 06:26:49 UTC] PHP Warning:  require(controller/frontend.php): failed to open stream: No such file or directory in /home/mathieu1/public_html/index.php on line 3
+[12-May-2018 06:26:49 UTC] PHP Warning:  require(controller/frontend.php): failed to open stream: No such file or directory in /home/mathieu1/public_html/index.php on line 3
+[12-May-2018 06:26:49 UTC] PHP Fatal error:  require(): Failed opening required 'controller/frontend.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/mathieu1/public_html/index.php on line 3
+[12-May-2018 06:26:54 UTC] PHP Warning:  require(controller/frontend.php): failed to open stream: No such file or directory in /home/mathieu1/public_html/index.php on line 3
+[12-May-2018 06:26:54 UTC] PHP Warning:  require(controller/frontend.php): failed to open stream: No such file or directory in /home/mathieu1/public_html/index.php on line 3
+[12-May-2018 06:26:54 UTC] PHP Fatal error:  require(): Failed opening required 'controller/frontend.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/mathieu1/public_html/index.php on line 3
+[12-May-2018 06:30:57 UTC] PHP Warning:  require(controller/frontend.php): failed to open stream: No such file or directory in /home/mathieu1/public_html/index.php on line 3
+[12-May-2018 06:30:57 UTC] PHP Warning:  require(controller/frontend.php): failed to open stream: No such file or directory in /home/mathieu1/public_html/index.php on line 3
+[12-May-2018 06:30:57 UTC] PHP Fatal error:  require(): Failed opening required 'controller/frontend.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/mathieu1/public_html/index.php on line 3
+[12-May-2018 18:14:23 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/mathieu1/public_html/model/Manager.php:13
+Stack trace:
+#0 /home/mathieu1/public_html/model/Manager.php(13): PDO->__construct('mysql:host=loca...', 'root', 'root')
+#1 /home/mathieu1/public_html/model/GifManager.php(11): Mathieu\gif\Manager->dbConnect()
+#2 /home/mathieu1/public_html/controller/controller.php(74): Mathieu\gif\GifManager->getGif(0)
+#3 /home/mathieu1/public_html/index.php(3): require('/home/mathieu1/...')
+#4 {main}
+  thrown in /home/mathieu1/public_html/model/Manager.php on line 13
+[12-May-2018 18:17:09 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'mathieu1_chevet'@'localhost' to database 'mathieu1_gif'' in /home/mathieu1/public_html/model/Manager.php:13
+Stack trace:
+#0 /home/mathieu1/public_html/model/Manager.php(13): PDO->__construct('mysql:host=loca...', 'mathieu1_chevet', '0Gnp7mpodd')
+#1 /home/mathieu1/public_html/model/GifManager.php(11): Mathieu\gif\Manager->dbConnect()
+#2 /home/mathieu1/public_html/controller/controller.php(74): Mathieu\gif\GifManager->getGif(0)
+#3 /home/mathieu1/public_html/index.php(3): require('/home/mathieu1/...')
+#4 {main}
+  thrown in /home/mathieu1/public_html/model/Manager.php on line 13
+[12-May-2018 18:17:11 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'mathieu1_chevet'@'localhost' to database 'mathieu1_gif'' in /home/mathieu1/public_html/model/Manager.php:13
+Stack trace:
+#0 /home/mathieu1/public_html/model/Manager.php(13): PDO->__construct('mysql:host=loca...', 'mathieu1_chevet', '0Gnp7mpodd')
+#1 /home/mathieu1/public_html/model/GifManager.php(11): Mathieu\gif\Manager->dbConnect()
+#2 /home/mathieu1/public_html/controller/controller.php(74): Mathieu\gif\GifManager->getGif(0)
+#3 /home/mathieu1/public_html/index.php(3): require('/home/mathieu1/...')
+#4 {main}
+  thrown in /home/mathieu1/public_html/model/Manager.php on line 13
+[12-May-2018 18:17:13 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'mathieu1_chevet'@'localhost' to database 'mathieu1_gif'' in /home/mathieu1/public_html/model/Manager.php:13
+Stack trace:
+#0 /home/mathieu1/public_html/model/Manager.php(13): PDO->__construct('mysql:host=loca...', 'mathieu1_chevet', '0Gnp7mpodd')
+#1 /home/mathieu1/public_html/model/GifManager.php(11): Mathieu\gif\Manager->dbConnect()
+#2 /home/mathieu1/public_html/controller/controller.php(74): Mathieu\gif\GifManager->getGif(0)
+#3 /home/mathieu1/public_html/index.php(3): require('/home/mathieu1/...')
+#4 {main}
+  thrown in /home/mathieu1/public_html/model/Manager.php on line 13
+[12-May-2018 18:17:15 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'mathieu1_chevet'@'localhost' to database 'mathieu1_gif'' in /home/mathieu1/public_html/model/Manager.php:13
+Stack trace:
+#0 /home/mathieu1/public_html/model/Manager.php(13): PDO->__construct('mysql:host=loca...', 'mathieu1_chevet', '0Gnp7mpodd')
+#1 /home/mathieu1/public_html/model/GifManager.php(11): Mathieu\gif\Manager->dbConnect()
+#2 /home/mathieu1/public_html/controller/controller.php(74): Mathieu\gif\GifManager->getGif(0)
+#3 /home/mathieu1/public_html/index.php(3): require('/home/mathieu1/...')
+#4 {main}
+  thrown in /home/mathieu1/public_html/model/Manager.php on line 13

@@ -10,7 +10,7 @@ class Manager
 		{
 
 
-        	$db = new \PDO('mysql:host=localhost;dbname=mathieu1_gif;charset=utf8', 'root', 'root');
+        	$db = new \PDO('mysql:host=localhost;dbname=mathieu1_gif;charset=utf8', 'mathieu1', 'xxx');
         	return $db;
     	}
 

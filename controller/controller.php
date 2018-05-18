@@ -8,6 +8,7 @@ require_once('model/GifManager.php');
 	$date;
 	$categorieId;
 	$categorieMessage;
+	$message;
 
 
 	$date = date("w");
@@ -53,26 +54,45 @@ require_once('model/GifManager.php');
 			break;
 		}
 
-	if ($categorieId == 0) 
+	if ($categorieId == 0 ) 
 	{
-		$categorieMessage = "Oui Oui Oui Oui";
+	    if ($dayNow == Samedi || $dayNow == Dimanche) 
+	    {
+	    	$categorieMessage = "Oui Oui Oui Oui <br> On ne bosse pas aujourd'hui";
+	    	$message = "enjoy";
+	    	
+	    }
+	    else
+	    {
+		    $categorieMessage = "Oui Oui Oui Oui";
+		    $message = "enjoy";
+	    }    
 	}
 
 	elseif ($categorieId == 1) 
 	{
 		$categorieMessage = "Bof";
+		$message = "blah";
 	}
 
 	elseif ($categorieId == 2)
 	{
 		$categorieMessage = "Non Non Non Non";
+		$message = "bad day";
 	}
+	
 
 
 	$GifManager = new \Mathieu\gif\GifManager();
-
-	$gif = $GifManager->getGif($categorieId);
 	
+    $url = "http://api.giphy.com/v1/gifs/search?api_key=ifFpHmF1uFzmY7Bfw6wCci4JFCcUoUXZ&q=$message&limit=25";
+    
+	$urlContent = $GifManager->getUrlContent($url);
+	
+	$random = rand(1,25);
+
+    $parse_gif = json_decode($urlContent,true);
+    $url_embed = $parse_gif["data"][$random]["embed_url"];
 
 	require('view/template.php');
 
