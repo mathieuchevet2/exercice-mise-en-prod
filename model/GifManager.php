@@ -2,16 +2,18 @@
 
 namespace Mathieu\gif;
 
-require_once("model/Manager.php");
+
 
 class GifManager extends Manager
 {
 	public function getGif($categorieId)
 	{
-		$db = $this->dbConnect();
+	    echo $idDb;
+		$db = $this->dbConnect($idDb, $mdpDb);
 		$req = $db->prepare('SELECT id, categorie, urlGif FROM gif WHERE categorie = ?');
 		$req->execute(array($categorieId));
 		$gifDay = $req->fetch();
+		echo $gifDay;
 
 		return $gifDay;
 	}

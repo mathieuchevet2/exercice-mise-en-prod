@@ -1,7 +1,10 @@
 <?php
+require_once 'bootstrap.php';
 
-require_once('model/Manager.php');
-require_once('model/GifManager.php');
+
+
+
+
 
 
 
@@ -58,7 +61,7 @@ require_once('model/GifManager.php');
 	{
 	    if ($dayNow == Samedi || $dayNow == Dimanche) 
 	    {
-	    	$categorieMessage = "Oui Oui Oui Oui <br> On ne bosse pas aujourd'hui";
+	    	$categorieMessage = "Oui Oui Oui Oui <br> On ne bosse pas aujourd'hui !!!";
 	    	$message = "enjoy";
 	    	
 	    }
@@ -81,7 +84,9 @@ require_once('model/GifManager.php');
 		$message = "bad day";
 	}
 	
-
+	
+// $GifManager = new \Mathieu\gif\GifManager();
+// $url_embed = $GifManager->getGif($categorieId);
 
 	$GifManager = new \Mathieu\gif\GifManager();
 	
@@ -89,11 +94,18 @@ require_once('model/GifManager.php');
     
 	$urlContent = $GifManager->getUrlContent($url);
 	
+
 	$random = rand(1,25);
 
     $parse_gif = json_decode($urlContent,true);
     $url_embed = $parse_gif["data"][$random]["embed_url"];
+    
+    if (isset($_SESSION['mail']) && isset($_SESSION['pass'])) 
+{
+    echo "<h2 class=\"txtcenter\"> Bienvenue " . $_SESSION['prenom'] . "</h2>";
+}
+    
 
 	require('view/template.php');
 
-
+?>
